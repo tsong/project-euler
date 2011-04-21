@@ -1,4 +1,4 @@
-n = ''.join([l.strip() for l in open('p8.in')])
+n = ''.join([l.strip() for l in open('data/p8.in')])
 
 m = -1
 for i in xrange(len(n)-5):

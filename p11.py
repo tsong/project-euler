@@ -1,4 +1,4 @@
-grid = [ [int(n) for n in l.strip().split()] for l in open('p11.in') ]
+grid = [ [int(n) for n in l.strip().split()] for l in open('data/p11.in') ]
 D = [(1,0),(-1,0),(0,1),(0,-1),(1,1),(-1,1),(1,-1),(-1,-1)]
 
 m = 0 
