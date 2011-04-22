@@ -19,11 +19,6 @@ def cycle(n):
 	return len(visited[visited.index(div):])
 
 
-i = -1
-m = 1
-for n in xrange(1,1000):
-	c = cycle(n)
-	if c > m:
-		i = n
-		m = c
-print i
+print reduce( lambda x, y: x if x[1] > y[1] else y,\
+			[(n,cycle(n)) for n in range(1,1000)] )[0]
+
