@@ -1,3 +1,14 @@
+#returns the greatest common denominator of a and b
+def gcd(a,b):
+	if b == 0:
+		return a
+	return gcd(b, a%b)
+
+#simplifies a fraction f, represented as tuple (numerator, demoniator)
+def simplify(f):
+	g = gcd(f[0],f[1])
+	return (f[0]/g, f[1]/g)
+
 #returns True if n is prime
 def isprime(n):
 	for i in xrange(2,n/2):
