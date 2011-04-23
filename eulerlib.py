@@ -1,4 +1,4 @@
-from math import sqrt
+from math import sqrt, ceil
 
 #returns the greatest common denominator of a and b
 def gcd(a,b):
@@ -13,8 +13,12 @@ def simplify(f):
 
 #returns True if n is prime
 def isprime(n):
-	for i in xrange(2,n/2):
-		if n % i == 0:
+	if n <= 1: return False
+	if n < 4: return True
+	if n % 2 == 0 or n % 3 == 0: return False 
+
+	for i in xrange(5,int(sqrt(n))+2,6):
+		if n % i == 0 or n % (i+2) == 0:
 			return False
 	return True
 
@@ -33,5 +37,11 @@ def sieve(n):
 	return [i for i in xrange(len(P)) if P[i]]
 
 
-	
+def testprime(n):
+	S = set(sieve(n))
+	for i in xrange(n):
+		if isprime(i) and i not in S:
+			print 'error:', i
+			return False
+	return True
 	
