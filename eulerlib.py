@@ -25,23 +25,10 @@ def isprime(n):
 #returns a list of prime numbers up to n using a sieve algorithm
 def sieve(n):
 	P = [False,False] + [True for i in xrange(n-2)]
-	i = 1
-	while i < sqrt(n):
-		i += 1
-		while i < n and not P[i]: i += 1
-		ii = i*i
-		while ii < n:
-			P[ii] = False 
-			ii += i
+
+	for i in xrange(2,int(sqrt(n))+2):
+		if P[i]:
+			for j in xrange(i*i,n,i):
+				P[j] = False
 
 	return [i for i in xrange(len(P)) if P[i]]
-
-
-def testprime(n):
-	S = set(sieve(n))
-	for i in xrange(n):
-		if isprime(i) and i not in S:
-			print 'error:', i
-			return False
-	return True
-	
