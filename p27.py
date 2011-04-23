@@ -1,6 +1,6 @@
 from eulerlib import *
 
-P = set(seive(1000000)) #pick arbitrarily large number
+P = set(sieve(1000000)) #pick arbitrarily large number
 
 def consecprimes(a,b):
 	n = 0

@@ -1,3 +1,3 @@
 from eulerlib import *
 
-print sum(seive(2000000))
+print sum(sieve(2000000))

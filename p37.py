@@ -1,7 +1,7 @@
 from eulerlib import *
 
 N = 1000000 #arbitrarily large number
-P = set(seive(N))
+P = set(sieve(N))
 
 def ltruncatable(n):
 	s = str(n)

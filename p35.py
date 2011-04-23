@@ -1,5 +1,5 @@
-from eulerlib import seive
-P = set(seive(1000000))
+from eulerlib import sieve
+P = set(sieve(1000000))
 
 def iscircular(n):
 	s = str(n)

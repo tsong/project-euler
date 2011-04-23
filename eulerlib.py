@@ -1,3 +1,5 @@
+from math import sqrt
+
 #returns the greatest common denominator of a and b
 def gcd(a,b):
 	if b == 0:
@@ -16,14 +18,14 @@ def isprime(n):
 			return False
 	return True
 
-#returns a list of prime numbers up to n using a seive algorithm
-def seive(n):
+#returns a list of prime numbers up to n using a sieve algorithm
+def sieve(n):
 	P = [False,False] + [True for i in xrange(n-2)]
 	i = 1
-	while i < n:
+	while i < sqrt(n):
 		i += 1
 		while i < n and not P[i]: i += 1
-		ii = 2*i
+		ii = i*i
 		while ii < n:
 			P[ii] = False 
 			ii += i

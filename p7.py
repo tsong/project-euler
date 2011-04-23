@@ -1,4 +1,4 @@
 from eulerlib import *
-s = seive(999999)
+s = sieve(999999)
 print s[10000]
 
