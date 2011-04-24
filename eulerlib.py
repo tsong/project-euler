@@ -6,6 +6,20 @@ def gcd(a,b):
 		return a
 	return gcd(b, a%b)
 
+#returns least common multiple of a and b
+def lcm(a,b):
+	return abs(a*b)/gcd(a,b)
+
+#returns result of addition of two fractions, represented as tuples
+def addf(x,y):
+	l = lcm(x,y)
+	f = (l/x[1]*x[0] + l/y[1]*y[0], l)
+	return simplify(f)
+
+#returns result of multiplication of two fractions, represented as tuples
+def multf(f,v):
+	return (f[0]*v, f[1]*v)
+
 #simplifies a fraction f, represented as tuple (numerator, demoniator)
 def simplify(f):
 	g = gcd(f[0],f[1])
