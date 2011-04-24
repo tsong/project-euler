@@ -12,7 +12,7 @@ def lcm(a,b):
 
 #returns result of addition of two fractions, represented as tuples
 def addf(x,y):
-	l = lcm(x,y)
+	l = lcm(x[1],y[1])
 	f = (l/x[1]*x[0] + l/y[1]*y[0], l)
 	return simplify(f)
 
