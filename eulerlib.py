@@ -2,13 +2,10 @@ from math import sqrt
 
 #returns the greatest common denominator of a and b
 def gcd(a,b):
-	if a == 0:
-		return b
 	while b != 0:
-		if a > b:
-			a -= b
-		else:
-			b -= a
+		t = b
+		b = a % b
+		a = t
 	return a
 
 #returns least common multiple of a and b
