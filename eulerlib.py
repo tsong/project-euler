@@ -1,3 +1,5 @@
+from math import sqrt
+
 #returns the greatest common denominator of a and b
 def gcd(a,b):
 	if b == 0:
@@ -30,6 +32,16 @@ def seive(n):
 
 	return [i for i in xrange(len(P)) if P[i]]
 
+#returns a list of all prime factors of n
+def factor(n):
+	if n < 1: return []
+	if n == 1: return [1]
 
-	
-	
+	F = []
+	for p in seive(int(sqrt(n))+2):
+		while n % p == 0:
+			n /= p
+			F.append(p)
+	if n != 1:
+		F.append(n)
+	return F
