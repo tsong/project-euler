@@ -1,6 +1,6 @@
-from eulerlib import seive 
+from eulerlib import sieve 
 
-P = set(seive(10000))
+P = set(sieve(10000))
 
 
 def isperm(a,b):

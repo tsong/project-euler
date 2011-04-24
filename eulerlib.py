@@ -55,7 +55,7 @@ def factor(n):
 	if n == 1: return [1]
 
 	F = []
-	for p in seive(int(sqrt(n))+2):
+	for p in sieve(int(sqrt(n))+2):
 		while n % p == 0:
 			n /= p
 			F.append(p)
