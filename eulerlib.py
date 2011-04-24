@@ -2,9 +2,14 @@ from math import sqrt
 
 #returns the greatest common denominator of a and b
 def gcd(a,b):
-	if b == 0:
-		return a
-	return gcd(b, a%b)
+	if a == 0:
+		return b
+	while b != 0:
+		if a > b:
+			a -= b
+		else:
+			b -= a
+	return a
 
 #returns least common multiple of a and b
 def lcm(a,b):
