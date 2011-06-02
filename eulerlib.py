@@ -12,6 +12,20 @@ def gcd(a,b):
 def lcm(a,b):
 	return abs(a*b)/gcd(a,b)
 
+#compares two fractions, returning 
+#	-1 if x < y
+#	0 if x = y
+#	1 if x > y
+def cmpf(x,y):
+	n1 = x[0]*y[1] 
+	n2 = y[0]*x[1]
+	if n1 > n2:
+		return 1
+	elif n1 < n2:
+		return -1
+	else
+		return 0
+
 #returns result of addition of two fractions, represented as tuples
 def addf(x,y):
 	l = lcm(x[1],y[1])
