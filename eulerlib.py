@@ -23,7 +23,7 @@ def cmpf(x,y):
 		return 1
 	elif n1 < n2:
 		return -1
-	else
+	else:
 		return 0
 
 #returns result of addition of two fractions, represented as tuples
